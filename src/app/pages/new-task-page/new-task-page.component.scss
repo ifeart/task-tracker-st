@@ -1,0 +1,29 @@
+.new-task-form {
+    margin-top: 20px;
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+}
+
+.input-field input, .input-field textarea {
+    width: 100%;
+}
+
+.row, .switch {
+    margin-bottom: 20px;
+}
+
+.switch {
+    display: flex;
+    justify-content: center;
+}
+
+.switch label {
+    font-size: 1.1rem;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+}

@@ -1,1 +1,344 @@
-/* You can add global styles to this file, and also import other style files */
+@import '../node_modules/@materializecss/materialize/dist/css/materialize.min';
+
+:root {
+    /* my colors */
+    --light-orange: #FFC123;
+    --lime-green: #CCFF00;
+
+
+
+    --md-source: #8c2dc0;
+    /* primary */
+    --md-ref-palette-primary0: #000000;
+    --md-ref-palette-primary10: #300049;
+    --md-ref-palette-primary20: #500075;
+    --md-ref-palette-primary25: #60008c;
+    --md-ref-palette-primary30: #7100a4;
+    --md-ref-palette-primary35: #7f1ab2;
+    --md-ref-palette-primary40: #8c2dc0;
+    --md-ref-palette-primary50: #a84bdb;
+    --md-ref-palette-primary60: #c467f7;
+    --md-ref-palette-primary70: #d88dff;
+    --md-ref-palette-primary80: #e7b4ff;
+    --md-ref-palette-primary90: #f6d9ff;
+    --md-ref-palette-primary95: #fdebff;
+    --md-ref-palette-primary98: #fff7fc;
+    --md-ref-palette-primary99: #fffbff;
+    --md-ref-palette-primary100: #ffffff;
+    /* secondary */
+    --md-ref-palette-secondary0: #000000;
+    --md-ref-palette-secondary10: #231728;
+    --md-ref-palette-secondary20: #382c3e;
+    --md-ref-palette-secondary25: #443749;
+    --md-ref-palette-secondary30: #504255;
+    --md-ref-palette-secondary35: #5c4d61;
+    --md-ref-palette-secondary40: #68596d;
+    --md-ref-palette-secondary50: #827287;
+    --md-ref-palette-secondary60: #9c8ba1;
+    --md-ref-palette-secondary70: #b7a5bc;
+    --md-ref-palette-secondary80: #d3c0d8;
+    --md-ref-palette-secondary90: #f0dcf4;
+    --md-ref-palette-secondary95: #fdebff;
+    --md-ref-palette-secondary98: #fff7fc;
+    --md-ref-palette-secondary99: #fffbff;
+    --md-ref-palette-secondary100: #ffffff;
+    /* tertiary */
+    --md-ref-palette-tertiary0: #000000;
+    --md-ref-palette-tertiary10: #331112;
+    --md-ref-palette-tertiary20: #4c2526;
+    --md-ref-palette-tertiary25: #593030;
+    --md-ref-palette-tertiary30: #663b3b;
+    --md-ref-palette-tertiary35: #744646;
+    --md-ref-palette-tertiary40: #815252;
+    --md-ref-palette-tertiary50: #9d6a6a;
+    --md-ref-palette-tertiary60: #b98383;
+    --md-ref-palette-tertiary70: #d79c9c;
+    --md-ref-palette-tertiary80: #f5b7b7;
+    --md-ref-palette-tertiary90: #ffdad9;
+    --md-ref-palette-tertiary95: #ffedec;
+    --md-ref-palette-tertiary98: #fff8f7;
+    --md-ref-palette-tertiary99: #fffbff;
+    --md-ref-palette-tertiary100: #ffffff;
+    /* neutral */
+    --md-ref-palette-neutral0: #000000;
+    --md-ref-palette-neutral10: #1d1b1e;
+    --md-ref-palette-neutral20: #332f33;
+    --md-ref-palette-neutral25: #3e3a3e;
+    --md-ref-palette-neutral30: #494549;
+    --md-ref-palette-neutral35: #555155;
+    --md-ref-palette-neutral40: #615d61;
+    --md-ref-palette-neutral50: #7b767a;
+    --md-ref-palette-neutral60: #958f93;
+    --md-ref-palette-neutral70: #b0a9ae;
+    --md-ref-palette-neutral80: #cbc5c9;
+    --md-ref-palette-neutral90: #e8e0e5;
+    --md-ref-palette-neutral95: #f6eff3;
+    --md-ref-palette-neutral98: #fff7fc;
+    --md-ref-palette-neutral99: #fffbff;
+    --md-ref-palette-neutral100: #ffffff;
+    /* neutral-variant */
+    --md-ref-palette-neutral-variant0: #000000;
+    --md-ref-palette-neutral-variant10: #1f1a21;
+    --md-ref-palette-neutral-variant20: #352e36;
+    --md-ref-palette-neutral-variant25: #403941;
+    --md-ref-palette-neutral-variant30: #4b444d;
+    --md-ref-palette-neutral-variant35: #575059;
+    --md-ref-palette-neutral-variant40: #645c65;
+    --md-ref-palette-neutral-variant50: #7d747e;
+    --md-ref-palette-neutral-variant60: #978e98;
+    --md-ref-palette-neutral-variant70: #b2a8b2;
+    --md-ref-palette-neutral-variant80: #cec3ce;
+    --md-ref-palette-neutral-variant90: #eadfea;
+    --md-ref-palette-neutral-variant95: #f9edf8;
+    --md-ref-palette-neutral-variant98: #fff7fc;
+    --md-ref-palette-neutral-variant99: #fffbff;
+    --md-ref-palette-neutral-variant100: #ffffff;
+    /* error */
+    --md-ref-palette-error0: #000000;
+    --md-ref-palette-error10: #410002;
+    --md-ref-palette-error20: #690005;
+    --md-ref-palette-error25: #7e0007;
+    --md-ref-palette-error30: #93000a;
+    --md-ref-palette-error35: #a80710;
+    --md-ref-palette-error40: #ba1a1a;
+    --md-ref-palette-error50: #de3730;
+    --md-ref-palette-error60: #ff5449;
+    --md-ref-palette-error70: #ff897d;
+    --md-ref-palette-error80: #ffb4ab;
+    --md-ref-palette-error90: #ffdad6;
+    --md-ref-palette-error95: #ffedea;
+    --md-ref-palette-error98: #fff8f7;
+    --md-ref-palette-error99: #fffbff;
+    --md-ref-palette-error100: #ffffff;
+    /* light */
+    --md-sys-color-primary-light: #8c2dc0;
+    --md-sys-color-on-primary-light: #ffffff;
+    --md-sys-color-primary-container-light: #f6d9ff;
+    --md-sys-color-on-primary-container-light: #300049;
+    --md-sys-color-secondary-light: #68596d;
+    --md-sys-color-on-secondary-light: #ffffff;
+    --md-sys-color-secondary-container-light: #f0dcf4;
+    --md-sys-color-on-secondary-container-light: #231728;
+    --md-sys-color-tertiary-light: #815252;
+    --md-sys-color-on-tertiary-light: #ffffff;
+    --md-sys-color-tertiary-container-light: #ffdad9;
+    --md-sys-color-on-tertiary-container-light: #331112;
+    --md-sys-color-error-light: #ba1a1a;
+    --md-sys-color-error-container-light: #ffdad6;
+    --md-sys-color-on-error-light: #ffffff;
+    --md-sys-color-on-error-container-light: #410002;
+    --md-sys-color-background-light: #fffbff;
+    --md-sys-color-on-background-light: #1d1b1e;
+    --md-sys-color-surface-light: #fffbff;
+    --md-sys-color-on-surface-light: #1d1b1e;
+    --md-sys-color-surface-variant-light: #eadfea;
+    --md-sys-color-on-surface-variant-light: #4b444d;
+    --md-sys-color-outline-light: #7d747e;
+    --md-sys-color-inverse-on-surface-light: #f6eff3;
+    --md-sys-color-inverse-surface-light: #332f33;
+    --md-sys-color-inverse-primary-light: #e7b4ff;
+    --md-sys-color-shadow-light: #000000;
+    --md-sys-color-surface-tint-light: #fffbff;
+    --md-sys-color-outline-variant-light: #cec3ce;
+    --md-sys-color-scrim-light: #000000;
+    /* dark */
+    --md-sys-color-primary-dark: #e7b4ff;
+    --md-sys-color-on-primary-dark: #500075;
+    --md-sys-color-primary-container-dark: #7100a4;
+    --md-sys-color-on-primary-container-dark: #f6d9ff;
+    --md-sys-color-secondary-dark: #d3c0d8;
+    --md-sys-color-on-secondary-dark: #382c3e;
+    --md-sys-color-secondary-container-dark: #504255;
+    --md-sys-color-on-secondary-container-dark: #f0dcf4;
+    --md-sys-color-tertiary-dark: #f5b7b7;
+    --md-sys-color-on-tertiary-dark: #4c2526;
+    --md-sys-color-tertiary-container-dark: #663b3b;
+    --md-sys-color-on-tertiary-container-dark: #ffdad9;
+    --md-sys-color-error-dark: #ffb4ab;
+    --md-sys-color-error-container-dark: #93000a;
+    --md-sys-color-on-error-dark: #690005;
+    --md-sys-color-on-error-container-dark: #ffb4ab;
+    --md-sys-color-background-dark: #1d1b1e;
+    --md-sys-color-on-background-dark: #e8e0e5;
+    --md-sys-color-surface-dark: #1d1b1e;
+    --md-sys-color-on-surface-dark: #e8e0e5;
+    --md-sys-color-surface-variant-dark: #4b444d;
+    --md-sys-color-on-surface-variant-dark: #cec3ce;
+    --md-sys-color-outline-dark: #978e98;
+    --md-sys-color-inverse-on-surface-dark: #332f33;
+    --md-sys-color-inverse-surface-dark: #e8e0e5;
+    --md-sys-color-inverse-primary-dark: #8c2dc0;
+    --md-sys-color-shadow-dark: #000000;
+    --md-sys-color-surface-tint-dark: #1d1b1e;
+    --md-sys-color-outline-variant-dark: #4b444d;
+    --md-sys-color-scrim-dark: #000000;
+  /* display-large */
+    --md-sys-typescale-display-large-font-family-name: Roboto;
+    --md-sys-typescale-display-large-font-family-style: Regular;
+    --md-sys-typescale-display-large-font-weight: 400px;
+    --md-sys-typescale-display-large-font-size: 57px;
+    --md-sys-typescale-display-large-line-height: 64px;
+    --md-sys-typescale-display-large-letter-spacing: -0.25px;
+  /* display-medium */
+    --md-sys-typescale-display-medium-font-family-name: Roboto;
+    --md-sys-typescale-display-medium-font-family-style: Regular;
+    --md-sys-typescale-display-medium-font-weight: 400px;
+    --md-sys-typescale-display-medium-font-size: 45px;
+    --md-sys-typescale-display-medium-line-height: 52px;
+    --md-sys-typescale-display-medium-letter-spacing: 0px;
+  /* display-small */
+    --md-sys-typescale-display-small-font-family-name: Roboto;
+    --md-sys-typescale-display-small-font-family-style: Regular;
+    --md-sys-typescale-display-small-font-weight: 400px;
+    --md-sys-typescale-display-small-font-size: 36px;
+    --md-sys-typescale-display-small-line-height: 44px;
+    --md-sys-typescale-display-small-letter-spacing: 0px;
+  /* headline-large */
+    --md-sys-typescale-headline-large-font-family-name: Roboto;
+    --md-sys-typescale-headline-large-font-family-style: Regular;
+    --md-sys-typescale-headline-large-font-weight: 400px;
+    --md-sys-typescale-headline-large-font-size: 32px;
+    --md-sys-typescale-headline-large-line-height: 40px;
+    --md-sys-typescale-headline-large-letter-spacing: 0px;
+  /* headline-medium */
+    --md-sys-typescale-headline-medium-font-family-name: Roboto;
+    --md-sys-typescale-headline-medium-font-family-style: Regular;
+    --md-sys-typescale-headline-medium-font-weight: 400px;
+    --md-sys-typescale-headline-medium-font-size: 28px;
+    --md-sys-typescale-headline-medium-line-height: 36px;
+    --md-sys-typescale-headline-medium-letter-spacing: 0px;
+  /* headline-small */
+    --md-sys-typescale-headline-small-font-family-name: Roboto;
+    --md-sys-typescale-headline-small-font-family-style: Regular;
+    --md-sys-typescale-headline-small-font-weight: 400px;
+    --md-sys-typescale-headline-small-font-size: 24px;
+    --md-sys-typescale-headline-small-line-height: 32px;
+    --md-sys-typescale-headline-small-letter-spacing: 0px;
+  /* body-large */
+    --md-sys-typescale-body-large-font-family-name: Roboto;
+    --md-sys-typescale-body-large-font-family-style: Regular;
+    --md-sys-typescale-body-large-font-weight: 400px;
+    --md-sys-typescale-body-large-font-size: 16px;
+    --md-sys-typescale-body-large-line-height: 24px;
+    --md-sys-typescale-body-large-letter-spacing: 0.50px;
+  /* body-medium */
+    --md-sys-typescale-body-medium-font-family-name: Roboto;
+    --md-sys-typescale-body-medium-font-family-style: Regular;
+    --md-sys-typescale-body-medium-font-weight: 400px;
+    --md-sys-typescale-body-medium-font-size: 14px;
+    --md-sys-typescale-body-medium-line-height: 20px;
+    --md-sys-typescale-body-medium-letter-spacing: 0.25px;
+  /* body-small */
+    --md-sys-typescale-body-small-font-family-name: Roboto;
+    --md-sys-typescale-body-small-font-family-style: Regular;
+    --md-sys-typescale-body-small-font-weight: 400px;
+    --md-sys-typescale-body-small-font-size: 12px;
+    --md-sys-typescale-body-small-line-height: 16px;
+    --md-sys-typescale-body-small-letter-spacing: 0.40px;
+  /* label-large */
+    --md-sys-typescale-label-large-font-family-name: Roboto;
+    --md-sys-typescale-label-large-font-family-style: Medium;
+    --md-sys-typescale-label-large-font-weight: 500px;
+    --md-sys-typescale-label-large-font-size: 14px;
+    --md-sys-typescale-label-large-line-height: 20px;
+    --md-sys-typescale-label-large-letter-spacing: 0.10px;
+  /* label-medium */
+    --md-sys-typescale-label-medium-font-family-name: Roboto;
+    --md-sys-typescale-label-medium-font-family-style: Medium;
+    --md-sys-typescale-label-medium-font-weight: 500px;
+    --md-sys-typescale-label-medium-font-size: 12px;
+    --md-sys-typescale-label-medium-line-height: 16px;
+    --md-sys-typescale-label-medium-letter-spacing: 0.50px;
+  /* label-small */
+    --md-sys-typescale-label-small-font-family-name: Roboto;
+    --md-sys-typescale-label-small-font-family-style: Medium;
+    --md-sys-typescale-label-small-font-weight: 500px;
+    --md-sys-typescale-label-small-font-size: 11px;
+    --md-sys-typescale-label-small-line-height: 16px;
+    --md-sys-typescale-label-small-letter-spacing: 0.50px;
+  /* title-large */
+    --md-sys-typescale-title-large-font-family-name: Roboto;
+    --md-sys-typescale-title-large-font-family-style: Regular;
+    --md-sys-typescale-title-large-font-weight: 400px;
+    --md-sys-typescale-title-large-font-size: 22px;
+    --md-sys-typescale-title-large-line-height: 28px;
+    --md-sys-typescale-title-large-letter-spacing: 0px;
+  /* title-medium */
+    --md-sys-typescale-title-medium-font-family-name: Roboto;
+    --md-sys-typescale-title-medium-font-family-style: Medium;
+    --md-sys-typescale-title-medium-font-weight: 500px;
+    --md-sys-typescale-title-medium-font-size: 16px;
+    --md-sys-typescale-title-medium-line-height: 24px;
+    --md-sys-typescale-title-medium-letter-spacing: 0.15px;
+  /* title-small */
+    --md-sys-typescale-title-small-font-family-name: Roboto;
+    --md-sys-typescale-title-small-font-family-style: Medium;
+    --md-sys-typescale-title-small-font-weight: 500px;
+    --md-sys-typescale-title-small-font-size: 14px;
+    --md-sys-typescale-title-small-line-height: 20px;
+    --md-sys-typescale-title-small-letter-spacing: 0.10px;
+
+
+  
+}
+
+.datepicker-controls .select-year input {
+    padding: 0;
+    width: 80px;
+    border: none;
+}
+
+.datepicker-controls .select-month input {
+    padding: 0;
+    border: none;
+}
+
+.month-prev, .month-next {
+    margin-top: 8px;
+}
+
+.datepicker-day-button:hover {
+    background-color: var(--md-sys-color-primary-light);
+    color: white;
+    transition: all 0.3s ease;
+}
+
+
+.datepicker-date-display {
+    background-color: var(--md-sys-color-primary-light);
+}
+
+.datepicker-table td.is-selected {
+    background-color: var(--md-sys-color-primary-light);
+    color: white;
+}
+
+.datepicker-cancel, .datepicker-clear, 
+.datepicker-today, .datepicker-done {
+    color: var(--md-sys-color-primary-light);
+}
+
+.datepicker-calendar-container {
+    padding: 10px;
+}
+
+textarea.materialize-textarea {
+    padding-top: 16px !important;
+}
+
+.input-field label {
+    padding-top: 3px !important;
+}
+
+.timepicker-digital-display {
+  background-color: var(--md-source);
+}
+
+.timepicker-input-hours, .timepicker-input-minutes {
+  padding: 0 !important;
+  width: 68px !important;
+  text-align: center;
+  border: none !important;
+  color: var(--md-sys-color-on-background) !important;
+}
+

@@ -1,0 +1,95 @@
+{
+    "GREETING": {
+        "HELLO": "Привет",
+        "WELCOME": "Добро пожаловать в наше приложение!"
+    },
+    "MAIN": {
+        "TITLE": "Менеджер задач"
+    },
+    "NEW_TASK": {
+        "PINNED": "Закрепить задачу",
+        "TITLE": "Название",
+        "DESCRIPTION": "Описание",
+        "PRIORITY": "Приоритет",
+        "PRIORITY_LOW": "Низкий",
+        "PRIORITY_MEDIUM": "Средний",
+        "PRIORITY_HIGH": "Высокий",
+        "PRIORITY_CRITICAL": "Критический",
+        "SELECT_PRIORITY": "Выберите приоритет",
+        "STATUS": "Статус",
+        "STATUS_PENDING": "Ожидает",
+        "STATUS_IN_PROGRESS": "В процессе",
+        "STATUS_COMPLETED": "Выполнено",
+        "SELECT_STATUS": "Выберите статус",
+        "DEADLINE": "Дата дедлайна",
+        "ADD_TASK": "Добавить задачу",
+        "TASK_CREATED": "Задача успешно создана!",
+        "DEADLINE_TIME": "Время дедлайна",
+        "DEADLINE_DATE": "Дата дедлайна",
+        "HEADER": "Новая задача"
+    },
+    "TOAST": {
+        "TASK_CREATED": "Задача создана!",
+        "TASK_DELETED": "Задача удалена!",
+        "TASK_UPDATED": "Задача обновлена!",
+        "TASK_DONE": "Задача выполнена!",
+        "TASK_UNDONE": "Задача возвращена!"
+    },
+    "CARD_TASK": {
+        "DELETE_TASK": "Удалить задачу",
+        "DONE_TASK": "Завершить задачу",
+        "UNDONE_TASK": "Вернуть задачу",
+        "STATUS": "Статус",
+        "PRIORITY": "Приоритет",
+        "completed": "Выполнено",
+        "in-progress": "В процессе",
+        "pending": "Ожидает",
+        "low": "Низкий",
+        "medium": "Средний",
+        "high": "Высокий",
+        "critical": "Критический",
+        "PINNED": "Закрепить задачу",
+        "UNPINNED": "Открепить задачу"
+    },
+    "MAIN_PAGE": {
+        "PINNED_TASKS": "Закрепленные задачи",
+        "TODAY_TASKS": "Задачи на сегодня",
+        "NO_TASKS": "Нет задач",
+        "ADD_TASK": "Добавить задачу"
+    },
+    "TODAY_PAGE": {
+        "TODAY_TASKS": "Задачи на сегодня",
+        "LIST_TASKS": "Список задач",
+        "WEEK_TASKS": "Задачи на неделю",
+        "MONTH_TASKS": "Задачи на месяц",
+        "WEEK_TASKS_MINI": "на неделю",
+        "MONTH_TASKS_MINI": "на месяц",
+        "NO_TASKS": "Нет задач"
+    },
+    "WEEK_TASKS_PAGE": {
+        "PENDING": "В ожидании",
+        "IN_PROGRESS": "В процессе",
+        "COMPLETED": "Выполненные",
+        "CRITICAL_AND_PINNED": "Критические и закрепленные",
+        "WEEK_TO_MONTH": "Переключить на месяц",
+        "MONTH_TASKS": "Задачи на месяц",
+        "WEEK_TASKS": "Задачи на неделю",
+        "NO_TASKS": "Нет задач"
+    },
+    "HEADER": {
+        "MAIN_PAGE": "Главная",
+        "NEW_TASK": "Новая задача",
+        "WEEK_TASKS": "Задачи на неделю",
+        "TODAY_PAGE": "Задачи на сегодня"
+    },
+    "TASK_SETTING_PAGE": {
+        "DESCRIPTION": "редактирование в разработке ;-]"
+    },
+    "DYNAMIC_TITLE": {
+        "MAIN_PAGE": "Главная",
+        "NEW_TASK_PAGE": "Создать задачу",
+        "WEEK_TASKS_PAGE": "Задачи на неделю",
+        "TODAY_PAGE": "Задачи на сегодня",
+        "TASK_SETTING_PAGE": "Редактирование"
+    }
+} 

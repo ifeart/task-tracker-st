@@ -1,0 +1,55 @@
+
+@if (!switchMonthSignal()) {
+    <h3 class="center-align">{{  'WEEK_TASKS_PAGE.WEEK_TASKS' | translate  }}</h3>
+} @else {
+    <h3 class="center-align">{{  'WEEK_TASKS_PAGE.MONTH_TASKS' | translate  }}</h3>
+}
+<div class="switch center-align">
+    <label>
+        {{ 'WEEK_TASKS_PAGE.WEEK_TO_MONTH' | translate }}
+        <input type="checkbox" [checked]="switchMonthSignal()" (change)="switchMonthSignal.set(!switchMonthSignal())">
+        <span class="lever"></span>
+    </label>
+</div>
+<div class="row s12">
+    <div class="col s12 m6 l3 status-tasks-container">
+        <h5>{{  'WEEK_TASKS_PAGE.PENDING' | translate  }}</h5>
+        @for (task of switchMonthSignal() ? (tasksMonth$ | async) : (tasksWeek$ | async); track task.id) {
+            @if (task.status === 'pending') {
+                <app-card-task [taskId]="task.id!"></app-card-task>
+            }
+        } @empty {
+            <p>{{ 'WEEK_TASKS_PAGE.NO_TASKS' | translate }}</p>
+        }
+    </div>
+    <div class="col s12 m6 l3 status-tasks-container">
+        <h5>{{  'WEEK_TASKS_PAGE.IN_PROGRESS' | translate  }}</h5>
+        @for (task of switchMonthSignal() ? (tasksMonth$ | async) : (tasksWeek$ | async); track task.id) {
+            @if (task.status === 'in-progress') {
+                <app-card-task [taskId]="task.id!"></app-card-task>
+            }
+        } @empty {
+            <p>{{ 'WEEK_TASKS_PAGE.NO_TASKS' | translate }}</p>
+        }
+    </div>
+    <div class="col s12 m6 l3 status-tasks-container">
+        <h5>{{  'WEEK_TASKS_PAGE.CRITICAL_AND_PINNED' | translate  }}</h5>
+        @for (task of switchMonthSignal() ? (tasksMonth$ | async) : (tasksWeek$ | async); track task.id) {
+            @if (task.priority === 'critical' || task.pinned) {
+                <app-card-task [taskId]="task.id!"></app-card-task>
+            }
+        } @empty {
+            <p>{{ 'WEEK_TASKS_PAGE.NO_TASKS' | translate }}</p>
+        }
+    </div>
+    <div class="col s12 m6 l3 status-tasks-container">
+        <h5>{{  'WEEK_TASKS_PAGE.COMPLETED' | translate  }}</h5>
+        @for (task of switchMonthSignal() ? (tasksMonth$ | async) : (tasksWeek$ | async); track task.id) {
+            @if (task.status === 'completed') {
+                <app-card-task [taskId]="task.id!"></app-card-task>
+            }
+        } @empty {
+            <p>{{ 'WEEK_TASKS_PAGE.NO_TASKS' | translate }}</p>
+        }
+    </div>
+</div>

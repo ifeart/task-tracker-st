@@ -1,0 +1,28 @@
+.language-switcher {
+    display: inline-block;
+    margin: 10px;
+}
+
+.btn {
+    margin: 0 2px;
+    text-transform: uppercase;
+}
+
+.btn-floating:not(.btn-large) {
+    text-align: center;
+    line-height: 38px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.btn-floating i {
+    color: var(--md-sys-color-on-primary-container);
+}
+
+.light-theme i {
+    color: var(--md-ref-palette-primary20) !important;
+}
+
+.dark-theme i {
+    color: var(--md-ref-palette-primary90) !important;
+}

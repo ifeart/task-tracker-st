@@ -1,0 +1,95 @@
+{
+    "GREETING": {
+        "HELLO": "Hello",
+        "WELCOME": "Welcome to our application!"
+    },
+    "MAIN": {
+        "TITLE": "Task Tracker"
+    },
+    "NEW_TASK": {
+        "PINNED": "Pin task",
+        "TITLE": "Title",
+        "DESCRIPTION": "Description",
+        "PRIORITY": "Priority",
+        "PRIORITY_LOW": "Low",
+        "PRIORITY_MEDIUM": "Medium",
+        "PRIORITY_HIGH": "High",
+        "PRIORITY_CRITICAL": "Critical",
+        "SELECT_PRIORITY": "Select priority",
+        "STATUS": "Status",
+        "STATUS_PENDING": "Pending",
+        "STATUS_IN_PROGRESS": "In Progress",
+        "STATUS_COMPLETED": "Completed",
+        "SELECT_STATUS": "Select status",
+        "DEADLINE": "Deadline date",
+        "ADD_TASK": "Add task",
+        "TASK_CREATED": "Task created successfully!",
+        "DEADLINE_TIME": "Deadline time",
+        "DEADLINE_DATE": "Deadline date",
+        "HEADER": "New task"
+    },
+    "TOAST": {
+        "TASK_CREATED": "Task created!",
+        "TASK_DELETED": "Task deleted!",
+        "TASK_UPDATED": "Task updated!",
+        "TASK_DONE": "Task done!",
+        "TASK_UNDONE": "Task undone!"
+    },
+    "CARD_TASK": {
+        "DELETE_TASK": "Delete task",
+        "DONE_TASK": "Done task",
+        "UNDONE_TASK": "Undone task",
+        "STATUS": "Status",
+        "PRIORITY": "Priority",
+        "completed": "Completed",
+        "in-progress": "In Progress",
+        "pending": "Pending",
+        "low": "Low",
+        "medium": "Medium",
+        "high": "High",
+        "critical": "Critical",
+        "PINNED": "Pin task",
+        "UNPINNED": "Unpin task"
+    },
+    "MAIN_PAGE": {
+        "PINNED_TASKS": "Pinned tasks",
+        "TODAY_TASKS": "Today tasks",
+        "NO_TASKS": "No tasks",
+        "ADD_TASK": "Add task"
+    },
+    "TODAY_PAGE": {
+        "TODAY_TASKS": "Today tasks",
+        "LIST_TASKS": "List tasks",
+        "WEEK_TASKS": "Week tasks",
+        "MONTH_TASKS": "Month tasks",
+        "WEEK_TASKS_MINI": "on week",
+        "MONTH_TASKS_MINI": "on month",
+        "NO_TASKS": "No tasks"
+    },
+    "WEEK_TASKS_PAGE": {
+        "PENDING": "Pending",
+        "IN_PROGRESS": "In Progress",
+        "COMPLETED": "Completed",
+        "CRITICAL_AND_PINNED": "Critical and pinned",
+        "WEEK_TO_MONTH": "Switch to month",
+        "MONTH_TASKS": "Month tasks",
+        "WEEK_TASKS": "Week tasks",
+        "NO_TASKS": "No tasks"
+    },
+    "HEADER": {
+        "MAIN_PAGE": "Main page",
+        "NEW_TASK": "New task",
+        "WEEK_TASKS": "Week tasks",
+        "TODAY_PAGE": "Today page"
+    },
+    "TASK_SETTING_PAGE": {
+        "DESCRIPTION": "Editing task in development :_]"
+    },
+    "DYNAMIC_TITLE": {
+        "MAIN_PAGE": "Main",
+        "NEW_TASK_PAGE": "Create task",
+        "WEEK_TASKS_PAGE": "Week tasks",
+        "TODAY_PAGE": "Tasks for today",
+        "TASK_SETTING_PAGE": "Edit task"
+    }
+} 

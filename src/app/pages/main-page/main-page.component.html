@@ -1,0 +1,30 @@
+<div class="container">
+    @if ((tasks$ | async)?.length! > 0) {
+        <div class="main-tasks">
+            <h2>{{ 'MAIN_PAGE.PINNED_TASKS' | translate }}</h2>
+            <div class="pinned-tasks">
+                @for (task of (tasks$ | async); track task.id) {
+                    @if (task.pinned) {
+                        <app-card-task [taskId]="task.id!"></app-card-task>
+                    }
+                }
+            </div>
+            <div class="today-tasks">
+                @if ((todayTasks$ | async)?.length! > 0) {
+                    <h2>{{ 'MAIN_PAGE.TODAY_TASKS' | translate }}</h2>
+                    @for (task of (todayTasks$ | async); track task.id) {
+                        @if (!task.pinned) {
+                            <app-card-task [taskId]="task.id!"></app-card-task>
+                        }
+                    }
+                }
+            </div>
+        </div>
+    } @else {
+        <div class="no-tasks-container">
+            <p>{{ 'MAIN_PAGE.NO_TASKS' | translate }}</p>
+            <a class="btn" routerLink="/task/new">{{ 'MAIN_PAGE.ADD_TASK' | translate }}</a>
+        </div>
+    }
+</div>
+

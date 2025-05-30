@@ -1,0 +1,20 @@
+<nav class="nav navbar">
+    <div class="nav-wrapper">
+        <a [routerLink]="['/']" class="brand-logo">
+            <img src="assets/images/tasklist.svg" alt="Logo" class="logo">
+        </a>
+        <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li class="tab"><a [routerLink]="['/']" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">{{'HEADER.MAIN_PAGE' | translate}}</a></li>
+            <li class="tab"><a [routerLink]="['/new-task']" routerLinkActive="active">{{'HEADER.NEW_TASK' | translate}}</a></li>
+            <li class="tab"><a [routerLink]="['/week-tasks']" routerLinkActive="active">{{'HEADER.WEEK_TASKS' | translate}}</a></li>
+            <li class="tab"><a [routerLink]="['/today']" routerLinkActive="active">{{'HEADER.TODAY_PAGE' | translate}}</a></li>
+        </ul>
+    </div>
+</nav>
+<ul class="sidenav" id="mobile-demo" #mobileSidenav>
+    <li><a [routerLink]="['/']" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">{{'HEADER.MAIN_PAGE' | translate}}</a></li>
+    <li><a [routerLink]="['/new-task']" routerLinkActive="active">{{'HEADER.NEW_TASK' | translate}}</a></li>
+    <li><a [routerLink]="['/week-tasks']" routerLinkActive="active">{{'HEADER.WEEK_TASKS' | translate}}</a></li>
+    <li><a [routerLink]="['/today']" routerLinkActive="active">{{'HEADER.TODAY_PAGE' | translate}}</a></li>
+</ul>

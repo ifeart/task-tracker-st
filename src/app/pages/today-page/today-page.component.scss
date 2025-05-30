@@ -1,0 +1,15 @@
+.switch label {
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.today-task-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+.week-container {
+    margin: 2rem;
+}

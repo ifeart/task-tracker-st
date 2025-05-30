@@ -1,0 +1,75 @@
+@if (task) {
+    <div class="card-task">
+        <a class="card-link" [routerLink]="['/task', task.id]">
+            <div class="card-content">
+                <p class="card-title left-align">{{ task.title }}</p>
+                @if (task.description) {
+                    <p class="description left-align">{{ task.description }}</p>
+                }
+                @if (task.deadline) {
+                    <span class="deadline">
+                        <i class="material-icons">schedule</i>
+                        {{ task.deadline | date:'dd.MM.yyyy HH:mm' }}
+                    </span>
+                }
+            </div>
+        </a>
+        <button 
+            #tooltipElement
+            class="btn-flat waves-effect pinned-btn tooltipped" 
+            [class.active]="task.pinned"
+            data-position="right"
+            [attr.data-tooltip]="task.pinned ? ('CARD_TASK.UNPINNED' | translate) : ('CARD_TASK.PINNED' | translate)" 
+            (click)="pinTask()">
+            <i class="material-icons">push_pin</i>
+        </button>
+        <div class="status-bar">
+            <div 
+                class="status-task-el status" 
+                [class.completed]="task.status === 'completed'" 
+                [class.in-progress]="task.status === 'in-progress'" 
+                [class.pending]="task.status === 'pending'">
+                {{ 'CARD_TASK.' + task.status | translate }}
+            </div>
+            <div 
+                class="status-task-el priority" 
+                [class.low]="task.priority === 'low'" 
+                [class.medium]="task.priority === 'medium'" 
+                [class.high]="task.priority === 'high'" 
+                [class.critical]="task.priority === 'critical'">
+                {{ 'CARD_TASK.' + task.priority | translate }}
+            </div>
+        </div>
+        <div class="card-action">
+            @if (task.status !== 'completed') {
+            <button 
+                #tooltipElement
+                class="btn-flat waves-effect done-btn tooltipped" 
+                data-position="bottom"
+                [attr.data-tooltip]="'CARD_TASK.DONE_TASK' | translate"
+                (click)="doneTask()">
+                <i class="material-icons">done</i>
+            </button>
+            } @else {
+                <button 
+                #tooltipElement
+                class="btn-flat waves-effect undone-btn tooltipped" 
+                data-position="bottom"
+                [attr.data-tooltip]="'CARD_TASK.UNDONE_TASK' | translate"
+                (click)="unDoneTask()">
+                <i class="material-icons">undo</i>
+            </button>
+            }
+            <button 
+                #tooltipElement
+                class="btn-flat waves-effect delete-btn tooltipped" 
+                data-position="bottom"
+                [attr.data-tooltip]="'CARD_TASK.DELETE_TASK' | translate"
+                (click)="deleteTask()">
+                <i class="material-icons">delete</i>
+            </button>
+        </div>
+    </div>
+} @else {
+    <!-- <p>{{ 'TASK_NOT_FOUND' | translate }}</p> -->
+}

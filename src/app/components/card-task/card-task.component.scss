@@ -1,0 +1,117 @@
+.card-task {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border: 2px solid var(--md-ref-palette-primary50);
+    margin: 20px;
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px;
+    position: relative;
+}
+
+.card-title, .description {
+    word-break: break-word;
+}
+
+.pinned-btn {
+    color: var(--md-sys-color-on-background);
+    padding: 0;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+}
+
+.pinned-btn.active {
+    rotate: 45deg;
+    color: var(--md-ref-palette-primary40);
+}
+
+
+.card-title {
+    margin-top: 0;
+    font-size: 1.5rem;
+    font-weight: 600;
+    width: 90%;
+}
+
+
+
+.deadline {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+.card-link {
+    text-decoration: none;
+    color: var(--md-sys-color-on-background);
+}
+
+.card-task {
+    text-overflow: ellipsis;
+}
+
+.delete-btn {
+    color: var(--md-ref-palette-error50);
+}
+
+.done-btn {
+    color: var(--md-ref-palette-success50);
+}
+
+.undone-btn {
+    color: var(--light-orange);
+}
+
+.card-action {
+    display: flex;
+    justify-content: space-between;
+}
+
+.status-bar {
+    display: flex;
+    justify-content: flex-start;
+    gap: 15px;
+}
+
+.status-task-el {
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 2px solid transparent;
+}
+
+.status-task-el.completed {
+    background-color: var(--lime-green);
+    color: var(--md-ref-palette-primary0);
+}
+
+.status-task-el.in-progress {
+    background-color: var(--md-ref-palette-primary100);
+    color: var(--md-source);
+    border-color: var(--md-source);
+}
+
+.status-task-el.low, .status-task-el.pending {
+    background-color: var(--md-ref-palette-primary100);
+    color: var(--md-ref-palette-primary0);
+    border-color: var(--md-ref-palette-primary0);
+}
+
+.status-task-el.medium {
+    background-color: var(--light-orange);
+    color: var(--md-ref-palette-primary0);
+}
+
+.status-task-el.high {
+    background-color: var(--md-ref-palette-error60);
+    color: var(--md-ref-palette-primary100);
+}
+
+.status-task-el.critical {
+    background-color: var(--md-ref-palette-error50);
+    color: var(--md-ref-palette-primary100);
+    border-color: var(--md-sys-color-on-background);
+}

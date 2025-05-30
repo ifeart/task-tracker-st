@@ -1,0 +1,38 @@
+.logo {
+    width: 4rem;
+}
+
+:host {
+    display: block;
+}
+
+.nav {
+    background-color: var(--md-sys-color-primary) !important;
+    color: var(--md-sys-color-on-primary) !important;
+}
+
+.nav .nav-wrapper a {
+    color: var(--md-sys-color-on-primary) !important;
+}
+
+.nav .nav-wrapper ul li a {
+    color: var(--md-sys-color-on-primary) !important;
+}
+
+.nav .nav-wrapper ul li a.active {
+    background-color: var(--md-sys-color-primary-container) !important;
+    color: var(--md-sys-color-on-primary-container) !important;
+}
+
+.sidenav {
+    background-color: var(--md-sys-color-surface) !important;
+}
+
+.sidenav li a {
+    color: var(--md-sys-color-on-surface) !important;
+}
+
+.sidenav li a.active {
+    background-color: var(--md-sys-color-primary-container) !important;
+    color: var(--md-sys-color-on-primary-container) !important;
+}

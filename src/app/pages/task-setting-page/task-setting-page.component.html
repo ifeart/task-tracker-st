@@ -1,0 +1,10 @@
+<div class="center-align">
+    @if (taskId) {
+        <app-card-task class="center-align" [taskId]="taskId"></app-card-task>
+        
+        <br><br>
+        <p>{{'TASK_SETTING_PAGE.DESCRIPTION' | translate}}</p>
+    } @else {
+        <p>Task not found</p>
+    }
+</div>

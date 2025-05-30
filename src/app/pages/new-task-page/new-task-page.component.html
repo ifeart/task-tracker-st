@@ -1,0 +1,63 @@
+<h4 class="center-align">{{ 'NEW_TASK.HEADER' | translate }}</h4>
+<form class="new-task-form col s12" [formGroup]="newTaskForm">
+    <div class="row">
+        <div class="input-field col s12 outlined">
+            <input id="input_text" type="text" maxlength="100" data-length="100" placeholder=" " formControlName="title" #characterCounter>
+            <label for="input_text">{{ 'NEW_TASK.TITLE' | translate }}</label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="input-field col s12 outlined">
+            <textarea id="textarea2" class="materialize-textarea" maxlength="500" data-length="500" placeholder=" " formControlName="description" #characterCounter></textarea>
+            <label for="textarea2">{{ 'NEW_TASK.DESCRIPTION' | translate }}</label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="input-field col s12 outlined">
+            <select id="form-select-1" formControlName="priority" #prioritySelect>
+                <option value="" disabled selected>{{ 'NEW_TASK.PRIORITY' | translate }}</option>
+                <option value="low">{{ 'NEW_TASK.PRIORITY_LOW' | translate }}</option>
+                <option value="medium">{{ 'NEW_TASK.PRIORITY_MEDIUM' | translate }}</option>
+                <option value="high">{{ 'NEW_TASK.PRIORITY_HIGH' | translate }}</option>
+                <option value="critical">{{ 'NEW_TASK.PRIORITY_CRITICAL' | translate }}</option>
+            </select>
+            <label for="form-select-1">{{ 'NEW_TASK.SELECT_PRIORITY' | translate }}</label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="input-field col s12 outlined" >
+            <select class="col s12" id="form-select-2" formControlName="status" #statusSelect>
+                <option class="col s12" value="" disabled selected>{{ 'NEW_TASK.STATUS' | translate }}</option>
+                <option class="col s12" value="pending">{{ 'NEW_TASK.STATUS_PENDING' | translate }}</option>
+                <option class="col s12" value="in-progress">{{ 'NEW_TASK.STATUS_IN_PROGRESS' | translate }}</option>
+                <option class="col s12" value="completed">{{ 'NEW_TASK.STATUS_COMPLETED' | translate }}</option>
+            </select>
+            <label for="form-select-2">{{ 'NEW_TASK.SELECT_STATUS' | translate }}</label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="input-field col s12 outlined" >
+            <input type="text" class="datepicker" id="deadline-picker" placeholder=" " formControlName="deadline" #datepicker>
+            <label for="deadline-picker">{{ 'NEW_TASK.DEADLINE' | translate }}</label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="input-field col s12 outlined" >
+            <input type="text" class="timepicker" id="deadline-time-picker" placeholder=" " formControlName="deadlineTime" #timepicker>
+            <label for="deadline-time-picker">{{ 'NEW_TASK.DEADLINE_TIME' | translate }}</label>
+        </div>
+    </div>
+    <div class="switch">
+        <label>
+            {{ 'NEW_TASK.PINNED' | translate }}
+            <input type="checkbox" formControlName="pinned">
+            <span class="lever"></span>
+        </label>
+    </div>
+    <div class="center">
+        <button class="btn filled icon-left" (click)="addTask()">
+            <i class="material-icons">add</i>
+            {{ 'NEW_TASK.ADD_TASK' | translate }}
+        </button>
+    </div>
+</form>

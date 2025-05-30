@@ -1,0 +1,40 @@
+<div class="container">
+    <div class="row center-align">
+        @if ((tasksToday$ | async)?.length! > 0) {
+        <div class="col s12 m6 l8 ">
+            <h4>{{ 'TODAY_PAGE.TODAY_TASKS' | translate }}</h4>
+            <div class="today-task-container">
+                @for (task of (tasksToday$ | async); track task.id) {
+                    <app-card-task [taskId]="task.id!"></app-card-task>
+                }
+            </div>
+        </div>
+        }
+        @if ((tasksWeek$ | async)?.length! > 0 || (tasksMonth$ | async)?.length! > 0) {
+        <div class="col s12 m6 l4  center-align ">
+            <h4 class="left-align">{{ 'TODAY_PAGE.LIST_TASKS' | translate }}</h4>
+            <div class="switch left-align">
+                <label>
+                    {{ 'TODAY_PAGE.WEEK_TASKS_MINI' | translate }}
+                    <input type="checkbox" [checked]="switchMonthSignal()" (change)="switchMonthSignal.set(!switchMonthSignal())">
+                    <span class="lever"></span>
+                    {{ 'TODAY_PAGE.MONTH_TASKS_MINI' | translate }}
+                </label>
+            </div>
+            <div class="collection center-align">
+                @for (task of switchMonthSignal() ? (tasksMonth$ | async) : (tasksWeek$ | async); track task.id) {
+                    <a [routerLink]="['/task', task.id]" class="collection-item left-align">
+                        {{ task.title }}
+                    </a>
+                }
+            </div>
+        </div>
+        }
+        @if ((tasksToday$ | async)?.length === 0 && (tasksMonth$ | async)?.length === 0) {
+            <div class="col s12 l8 center-align">
+                <h4>{{ 'TODAY_PAGE.NO_TASKS' | translate }}</h4>
+            </div>
+        }
+    </div>
+</div>
+
