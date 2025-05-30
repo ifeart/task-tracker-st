@@ -23,7 +23,7 @@
     } @else {
         <div class="no-tasks-container">
             <p>{{ 'MAIN_PAGE.NO_TASKS' | translate }}</p>
-            <a class="btn" routerLink="/task/new">{{ 'MAIN_PAGE.ADD_TASK' | translate }}</a>
+            <a class="btn" [routerLink]="['/new-task']">{{ 'MAIN_PAGE.ADD_TASK' | translate }}</a>
         </div>
     }
 </div>
